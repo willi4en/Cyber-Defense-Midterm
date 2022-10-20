@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head class="myheader">
+    <meta charset="UTF-8">`
+    <title style="text-align: right;">My Smart Fridge UI</title>
+
+    <!-- The following line references an external css file -->
+    <!-- It defines style rules for your page, and elements in your page -->
+    <link href="css/style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <h1>Smart Fridge</h1>
+    <p>Hello There</p>
+    <form style="background:#4287f5;height: 400px; width: 600px; padding: 10px;">
+        <header>
+            <label style="text-align: center; font-size: 24; font-weight: bold;">Temperature:</label>
+        </header>
+        <div id="clock" onload="startClock()">0:0:0</div>
+        <button id="minusButton">-</button>
+        <span id="temperature" style="font-size: 12;">0</span>
+        <button id="plusButton">+</button>
+        <button id="closeButton">Close</button>
+        <button id="openButton">Open</button>
+        
+    </form>
+
+    <svg>        
+        <rect x="50" y="20" rx="20" ry="20" width="150" height="80"
+        style="fill: red;opacity:0.5"/>
+        <rect x="100" y="50" rx="20" ry="20" width="150" height="80"
+        style="fill: red;opacity:0.5"/>
+        <rect x="50" y="50" rx="20" ry="20" width="150" height="80"
+        style="fill: red;opacity:0.5"/>
+        <rect x="100" y="20" rx="20" ry="20" width="150" height="80"
+        style="fill: red;opacity:0.5"/>
+        <rect x="50" y="20" rx="20" ry="20" width="200" height="110"
+        style="fill: red;stroke:black;stroke-width:5px;opacity:0.5;stroke-opacity:1;"/>
+    </svg>
+
+    <!-- Load external JS files -->
+    <!-- This is where you will do most of the 'work' for your applications -->
+    <script src="js/main.js"></script>
+</body>
+</html>
