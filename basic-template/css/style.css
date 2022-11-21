@@ -1,11 +1,12 @@
 html {
-    background-color: rgb(15, 10, 72);   
+    background-color: rgb(255, 255, 255);   
 }
 
 #game-board {
     display: flex;
     flex-direction: column;
     height: 96vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #traffic-zone {
@@ -44,24 +45,21 @@ html {
 
 #traffic-box {
     max-height: 60vh;
-
-    background-color: grey;
-
     align-self: center;
-
     display: flex;
     flex-direction: column;
 }
 
 
 #bottom-bar {
-    width: 100vw;
+    width: 100%;
     height: 25vh;
-    background-color: grey;
-    margin: 0;
-
+    background-color: rgb(223, 223, 223);
+    margin-right: 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 8px;
     align-self: center;
-
     display: flex;
 }
 
@@ -72,9 +70,11 @@ html {
     width: 20vw;
     height: 15vh;
 
-    background-color: black;
+    background-color: rgba(91, 115, 250, 0.625);
     color: white;
-
+    border: none;
+    border-radius: 8px;
+    font-size: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,12 +82,117 @@ html {
     align-self: center;
 }
 
-.traffic-button {
+.accept-button {
     margin-left: 4vw;
     margin-right: 4vw;
-
     width: 20vw;
     height: 15vh;
-
     align-self: center;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(102, 248, 132, 0.837);
+    font-size: 24px;
+    font-weight: bold;
 }
+.accept-button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.reject-button {
+    margin-left: 4vw;
+    margin-right: 4vw;
+    width: 20vw;
+    height: 15vh;
+    align-self: center;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(248, 102, 102, 0.837);
+    font-size: 24px;
+    font-weight: bold;
+}
+.reject-button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.top-menu {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-content: center;
+}
+
+.title-label {
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.desc-button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: auto;
+}
+
+.desc-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/* #region Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+.modal:hover {
+    cursor: pointer;
+}
+/* #endregion */
+
+/* #region Modal Content */
+.modal-content {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    height: 100%;
+}
+/* #endregion */
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/* #region Login & Create Account Animations */
+/* Add Zoom Animation */
+.animate {
+-webkit-animation: animatezoom 0.6s;
+animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+from {-webkit-transform: scale(0)} 
+to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+from {transform: scale(0)} 
+to {transform: scale(1)}
+}
+/* #endregion */

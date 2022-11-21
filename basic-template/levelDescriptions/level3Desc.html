@@ -1,0 +1,28 @@
+
+<h2>Level 3 Description:</h2>
+
+<p>
+    The attacks used in this example are:
+        <br>&emsp;&emsp;Formbook / XLoader
+        <br>&emsp;&emsp;Emotet
+</p>
+
+<p>
+    XLoader is an information stealer which is the successor to Formbook.
+    <br>It can steal credentials, capture keystrokes, take screenshots, and download/execute additional binaries.
+    <br>XLoader uses HTTP to communicate with the C2 server. An HTTP GET query is then sent as a form of registration.
+    <br>Afterwards, the malware makes HTTP POST requests to the C2 to exfiltrate information.
+    <br>In both cases, the GET parameters and the POST data share a similar format and are encrypted.
+</p>
+
+<p>
+    Throughout the malware, there are multiple structure of encrypted blocks of data and code.
+    <br>These blocks are designed to confuse malware analysts and disassemblers by using the assembly instructions for a function prologue <i>push ebp</i>
+    <br>and <i>mov ebp, esp</i>. These blocks are decrypted using an RC4 based algorithm combined with an encoding layer and a custom virtual machine
+</p>
+
+<p>
+    <br>Emotet was historically a banking malware organized in a botnet. Nowadays, it is mostly used as an infrastructure service for content delivery.
+</p>
+
+<img src="Emotet.png" style="width: 362px; height: 196px">

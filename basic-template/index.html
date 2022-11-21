@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head class="myheader">
-    <meta charset="UTF-8">`
+    <meta charset="UTF-8">
     <title style="text-align: right;">Traffic Cop UI</title>
 
     <!-- The following line references an external css file -->
@@ -11,6 +11,11 @@
 </head>
 <body>
     <div id="game-board">
+        <div class="top-menu">
+            <label id="titleLabel" class="title-label">Level 1 Phase 1</label>
+            <button class="desc-button" onclick="descClick()">Description</button>            
+        </div>
+        <hr style="width: 100%;"/>
         <div id="traffic-zone">
             <div id="traffic-box">
                 <img id="traffic-label" src="TrafficLabel.PNG">
@@ -21,9 +26,19 @@
         </div>
         <div id="bottom-bar">
             <div class="traffic-info" id="time-box"><h2 id="time"></h2> </div>
-            <button class="traffic-button" id="accept">Accept</button>
-            <button class="traffic-button" id="reject">Reject</button>
+            <button class="accept-button" id="accept">Accept</button>
+            <button class="reject-button" id="reject">Reject</button>
             <div class="traffic-info" id="score-box"><h2 id="score"></h2></div>
+        </div>
+        <div id="descDiv" class="modal" onclick="windowClick()">
+            <form class="modal-content animate">                
+                <div class="container">
+                    <embed id="descEmbed"
+                        width="100%"
+                        height="100%"
+                        src="#"/>
+                </div>
+            </form>
         </div>
     </div>
     
